@@ -1,0 +1,37 @@
+<div class="login-form">
+
+  <h2>{{ 345345 | currency:'INR'}}</h2>
+<h1>Result {{result}}</h1>
+<h1>Counter Value : {{counter}}</h1>
+<h1>Testing Params --- {{testingparams}}</h1>
+  <h1>Login Form</h1>
+  <form action="#">
+    <h2>You are Typing..{{unametp}}</h2>
+   <label>{{luserid}}: </label><input type="text" name='uname' (keypress)='methodkuchbhi()'
+    placeholder="username" [(ngModel)]='uname'/> <br>
+   <label>{{lpassword}} : </label><input type="password" name="pwd"
+    placeholder="password" [(ngModel)]='pwd'/> <br>
+    <label>Fruits : </label>
+    <select>
+      <option *ngFor='let i of fruits'>{{i}}</option>
+    </select>
+
+    <input type="button" value="log in" (click)='verifyUser()'/>
+     <input type="button" value="TRUE" (click)='booleandemotrue()'/>
+      <input type="button" value="FALSE in" (click)='booleandemofalse()'/>
+        <input type="button" value="EventCheck" (keypress)='checkEvent($event)'/>
+
+  </form>
+  <h2>Message ....{{msg}}</h2>
+<h2 *ngIf='testboolean' >Boolean Message</h2>
+
+<table>
+  <tr *ngFor='let car of cars'>
+     <span *ngIf='car.available; then viewstud else hypen'></span>
+                    <ng-template #viewstud> {{car.name}} </ng-template>
+                    <ng-template #hypen> - </ng-template>
+
+  </tr>
+</table>
+
+</div>
